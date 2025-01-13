@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin-top: 30px;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 80px auto; /* Increased top margin for better separation */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.profile-container h1 {
+  margin-bottom: 20px;
+  color: #1e6ea2;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  position: relative; /* To position the "Change Password" button */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group input[type="range"] {
+  width: calc(100% - 50px);
+}
+
+#volume-value {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.form-group span {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Small Change Password button style */
+.change-password-btn {
+  background: none;
+  border: none;
+  color: #1e6ea2; /* Dark blue color */
+  font-size: 0.9em;
+  cursor: pointer;
+  position: absolute; /* Positioning relative to the form-group */
+  right: 10px; /* Position the button to the right side */
+  top: 50%;
+  transform: translateY(50%); /* Vertically centered */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Change Password button hover effect */
+.change-password-btn:hover {
+  color: #0b4a73; /* Darker blue when hovering */
+}
+
+/* General Button Styles */
+button {
+  padding: 12px;
+  background-color: #1e6ea2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block; /* Allow buttons to be side by side */
+  margin: 5px; /* Add spacing to prevent overlap */
+}
+
+button:hover {
+  background-color: #155480;
+}
+
+/* Sign Out and Save Changes buttons alignment */
+#save-button,
+#signout-button {
+  width: calc(50% - 10px); /* Make buttons half-width with some spacing */
+  float: right; /* Align buttons to the right */
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Center the modal */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  width: 90%; /* Suitable for mobile view */
+  max-width: 400px; /* Maintain a max width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Center the content */
+}
+
+/* Modal Title */
+.modal-content h2 {
+  margin: 0 0 20px; /* Add space below the title */
+  color: #1e6ea2;
+}
+
+/* Input Styling */
+.modal-content label {
+  display: block; /* Force the label onto a new line */
+  margin: 10px 0 5px; /* Add spacing around labels */
+  font-size: 14px;
+  color: #555;
+  text-align: left; /* Align text to the left */
+}
+
+.modal-content input {
+  width: 100%; /* Full width */
+  padding: 10px;
+  margin-bottom: 20px; /* Space between inputs */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevent padding from affecting width */
+}
+
+/* Button Styling */
+.modal-content button {
+  background-color: #1e6ea2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Full width button */
+}
+
+.modal-content button:hover {
+  background-color: #165a8c; /* Darken button color on hover */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e6ea2;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #165a8c; /* Darken color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Full width for smaller screens */
+    margin-top: 20%; /* Adjust top margin */
+  }
+
+  .modal-content button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

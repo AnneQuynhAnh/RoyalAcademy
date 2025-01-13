@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="../CSS/profile.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/topbar.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h1>Profile Settings</h1>
+
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="********" disabled />
+        <button id="change-password-button" class="change-password-btn">
+          Change Password
+        </button>
+      </div>
+
+      <!-- Gmail -->
+      <div class="form-group">
+        <label for="gmail">Gmail:</label>
+        <input type="email" id="gmail" placeholder="Enter your Gmail" />
+      </div>
+
+      <!-- Volume -->
+      <div class="form-group">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" min="0" max="100" value="50" />
+        <span id="volume-value">50</span>%
+      </div>
+
+      <!-- Set Goals -->
+      <div class="form-group">
+        <label for="set-goals">Set Daily Learning Goal:</label>
+        <select id="set-goals">
+          <option value="5">5 minutes (Easy)</option>
+          <option value="10">10 minutes (Great Job)</option>
+          <option value="15">15 minutes (Pro)</option>
+          <option value="20">20 minutes (Super Pro)</option>
+        </select>
+      </div>
+
+      <!-- Choose Levels -->
+      <div class="form-group">
+        <label for="choose-levels">Choose Level:</label>
+        <select id="choose-levels">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
+      <!-- Save Button -->
+      <button id="save-button">Save Changes</button>
+      <!-- Sign Out Button -->
+      <button id="signout-button">Sign Out</button>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="change-password-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Change Password</h2>
+        <label for="old-password">Old Password:</label>
+        <input
+          type="password"
+          id="old-password"
+          placeholder="Enter your old password"
+        />
+        <h3 for="new-password">New Password:</h3>
+        <input
+          type="password"
+          id="new-password"
+          placeholder="Enter new password"
+        />
+        <input
+          type="password"
+          id="confirm-new-password"
+          placeholder="Confirm new password"
+        />
+        <button id="update-password-button">Update Password</button>
+      </div>
+    </div>
+
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/topbar.js"></script>
+    <script src="../JS/profile.js"></script>
+  </body>
+</html>

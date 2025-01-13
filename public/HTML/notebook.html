@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notebook</title>
+    <!-- Link to the CSS files for styling -->
+    <link rel="stylesheet" href="../CSS/notebook.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/topbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tilt+Neon&family=Wallpoet&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="notebook-container">
+      <!-- Top Bar (optional) -->
+      <header class="topbar"></header>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="dictionarySearch"
+          placeholder="Search for a word..."
+        />
+        <button id="searchButton">Search</button>
+      </div>
+
+      <!-- Result Section -->
+      <div id="result" class="result"></div>
+
+      <!-- Recently Added Section -->
+      <div class="section-title">
+        My notebooks
+        <img
+          id="createFolderIcon"
+          src="/assets/icons/blue/Icons-VnEng-18.png"
+          alt="Create Folder"
+          style="
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            position: relative;
+            top: 10px; /* Adjust this value to move the image down */
+          "
+        />
+      </div>
+
+      <div class="scrollable-container">
+        <ul id="recentWords">
+          <!-- Dynamically populate recent words -->
+        </ul>
+      </div>
+
+      <!-- Professional Topics Section -->
+      <div class="section-title">Professional Topics</div>
+      <div class="scrollable-container">
+        <div class="folder">
+          <div class="folder-icon"></div>
+          <div class="folder-name">Business</div>
+        </div>
+        <div class="folder">
+          <div class="folder-icon"></div>
+          <div class="folder-name">Technology</div>
+        </div>
+        <div class="folder">
+          <div class="folder-icon"></div>
+          <div class="folder-name">Science</div>
+        </div>
+        <div class="folder">
+          <div class="folder-icon"></div>
+          <div class="folder-name">Arts</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson Modal -->
+    <div id="lessonModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div id="flashcardContainer" class="flashcard-container"></div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <script src="../JS/navbar.js"></script>
+    <!-- Top Bar -->
+    <script src="../JS/topbar.js"></script>
+    <!-- Dictionary Functionality -->
+    <script src="../JS/dictionary.js"></script>
+    <!-- Notebook Functionality -->
+    <script src="../JS/notebook.js"></script>
+  </body>
+</html>

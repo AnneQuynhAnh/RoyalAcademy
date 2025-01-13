@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/topbar.css" />
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div class="content"></div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+    <!-- Modal for Lessons -->
+    <div id="lessonModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close-button">&times;</span>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container">
+          <!-- Dynamic Quiz Questions Will Be Loaded Here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../JS/topbar.js"></script>
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/home.js"></script>
+  </body>
+</html>

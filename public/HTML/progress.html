@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+    <link rel="stylesheet" href="../CSS/progress.css" />
+    <link rel="stylesheet" href="../CSS/topbar.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="progress">
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="usersearch" placeholder="Search for a user" />
+        <button id="searchButton">Search</button>
+      </div>
+
+      <!-- Result Section -->
+      <div id="result" class="result"></div>
+
+      <!-- Main Container -->
+   
+        <!-- Progress Section -->
+        <div class="progress-chart">
+          <h2>Your Progress</h2>
+          <canvas id="learningProgressChart"></canvas>
+        </div>
+
+        <!-- Friend's Progress Section -->
+        <div class="friends-progress">
+          <h2>Your Friend's Progress</h2>
+          <ul class="ranking-list">
+            <li>
+              <span class="ranking">1. Alex Johnson</span>
+              <span class="hours">12 hrs</span>
+            </li>
+            <li>
+              <span class="ranking">2. Chris Evans</span>
+              <span class="hours">10 hrs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/topbar.js"></script>
+    <script src="../JS/progress.js"></script>
+  </body>
+</html>

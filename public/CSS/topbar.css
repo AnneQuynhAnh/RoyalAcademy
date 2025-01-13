@@ -1,0 +1,86 @@
+/* Reset body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+/* Fixed transparent top navigation bar */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Push logo to the left and profile icon to the right */
+  align-items: center; /* Vertically center items */
+  background-color: #ffffff; /* Transparent background */
+  height: 60px; /* Fixed height */
+  z-index: 1000;
+  border-bottom: 1px solid #1e6ea2; /* Bottom border */
+  padding: 0; /* Ensure no padding around the nav bar */
+}
+
+/* Left corner: Logo styling */
+.nav-item.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.nav-item.logo img {
+  height: 50px; /* Logo size */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Prevent distortion */
+  margin-left: 0; /* Align exactly to the left corner */
+}
+
+/* Right corner: Profile button styling */
+.nav-item.profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0; /* No extra margin */
+}
+
+.nav-item.profile a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%; /* Circular background */
+  background-color: #b9e2f9; /* Default circular BG color */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 30px; /* Align exactly to the right corner */
+}
+
+.nav-item.profile a img {
+  width: 45px; /* Profile icon size */
+  height: 55px; /* Maintain aspect ratio */
+  object-fit: contain; /* Prevent distortion */
+}
+
+/* Hover effect for profile button */
+.nav-item.profile a:hover {
+  transform: scale(1.1); /* Slight scaling on hover */
+  background-color: #87c8f0; /* Change background color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-item.logo img {
+    height: 50px; /* Adjust logo size for smaller screens */
+  }
+
+  .nav-item.profile a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-item.profile a img {
+    width: 45px;
+    height: 50px;
+  }
+}

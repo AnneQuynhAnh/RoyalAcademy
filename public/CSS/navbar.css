@@ -1,0 +1,108 @@
+/* Ensure the body and html fill the entire viewport */
+html,
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sticky bottom navigation bar */
+.bottom-nav {
+  position: fixed; /* Stick to the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  height: 60px; /* Set a fixed height */
+  z-index: 1000; /* Ensure it is above other content */
+  box-sizing: border-box;
+}
+
+/* Pseudo-elements for the border with an empty middle */
+.bottom-nav::before,
+.bottom-nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 1px; /* Border thickness */
+  background-color: #1e6ea2; /* Border color */
+  z-index: 10;
+}
+
+.bottom-nav::before {
+  left: 0;
+  width: calc(50% - 50px); /* Border width adjusted for empty center */
+}
+
+.bottom-nav::after {
+  right: 0;
+  width: calc(50% - 50px); /* Border width adjusted for empty center */
+}
+
+/* Style for individual nav items */
+.nav-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circular background for each icon */
+.nav-item a {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular shape */
+  background-color: #b9e2f9;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Icon sizes */
+.nav-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* Ensure the image fits inside the container */
+  display: block; /* Prevent extra spacing caused by inline elements */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Special styling for home button */
+#homepage a {
+  width: 70px;
+  height: 70px;
+  background-color: #b9e2f9; /* Highlight home button */
+  transform: translateY(-10px); /* Raise it above other items */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  border-radius: 50%; /* Ensure the button remains circular */
+}
+
+/* Larger image inside home button */
+#homepage img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Ensure the image fits inside the container */
+  display: block; /* Prevent extra spacing caused by inline elements */
+  margin: 0;
+  padding: 0;
+}
+/* Active nav item */
+.nav-item.active a {
+  background-color: #87c8f0; /* Highlight active state */
+}
+
+#homepage.active a {
+  background-color: #87c8f0 !important; /* Ensure specificity for home button */
+}

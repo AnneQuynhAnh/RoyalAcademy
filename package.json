@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@google-cloud/dialogflow": "^6.13.0",
+    "@google-cloud/translate": "^8.5.0",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express-mysql-session": "^3.0.3",
+    "express-session": "^1.18.1"
+  }
+}
